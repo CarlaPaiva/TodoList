@@ -1,18 +1,22 @@
 body{
     background-color: #d2cca1;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: 200;
+    color: #696969;
 }
 
 #app {
     display: block;
     height: auto;
-    width: 300px;
+    width: 1000px;
     margin-left: 450px;
 }
 
 #app h1{
     color: #387780;
+    font-weight: 600;
+}
+
+#app ul{
     font-weight: 600;
 }
 
@@ -24,12 +28,12 @@ body{
 #app ul a{
     margin-left: 10px;
     text-decoration-line: none;
-    color: black;
+    color: #757780;
 }
 
 #app ul a:hover{
     color: #e83151;
-    font-weight: bold;
+    font-weight: 800;
 }
 
 #app button{
