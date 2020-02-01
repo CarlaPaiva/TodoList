@@ -19,7 +19,7 @@ function renderToDos(){
         linkElement.appendChild(linkText);
         linkElement.setAttribute('href', '#');
 
-        var pos = todos.indexOf(todos);
+        var pos = todos.indexOf(todo);
         linkElement.setAttribute('onclick', 'deleteToDo(' + pos + ')')
 
         listTodos.appendChild(tempElement);
