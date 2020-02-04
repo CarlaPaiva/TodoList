@@ -2,11 +2,7 @@ var listTodos = document.querySelector('#app ul');
 var inputElement = document.querySelector('#app input');
 var buttonElement = document.getElementById('btnAdd');
 
-var todos = [
-    'Fazer café',
-    'Estudar Javascript',
-    'Publicar projetos no GitHub'
-];
+var todos = JSON.parse(localStorage.getItem('list_todos')) || [''];
 
 function renderToDos(){
     listTodos.innerHTML = '';
@@ -36,6 +32,7 @@ function addTodo(){
     if (todoText !== ''){
         todos.push(todoText);
         inputElement.value = '';
+        saveToStorage();
         renderToDos();
     }
 }
@@ -44,5 +41,10 @@ buttonElement.addEventListener('click', addTodo);
 
 function deleteToDo(pos){
     todos.splice(pos, 1);
+    saveToStorage();
     renderToDos();
+}
+
+function saveToStorage(){
+    localStorage.setItem('list_todos', JSON.stringify(todos));
 }
